@@ -1,0 +1,331 @@
+/* Container Principal para alinhar o labirinto e os controles lado a lado */
+.main-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px;
+}
+
+.maze-container-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Container do Labirinto */
+.maze-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Verde escuro representando a grama */
+    background-color: #006400;
+    padding: 5px;
+    border: 3px solid #ffffff;
+    /* Borda branca para simular as linhas do campo */
+    border-radius: 8px;
+    width: fit-content;
+    max-width: 90vw;
+    /* Limitar a largura máxima para telas pequenas */
+}
+
+/* Linha do Labirinto */
+.maze-row {
+    display: flex;
+}
+
+/* Células do Labirinto */
+.cell {
+    width: 28px;
+    height: 28px;
+    border: 1px solid #ffffff;
+    /* Linhas brancas entre as células */
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    /* Tamanho menor para os emojis */
+    color: #ffff;
+    /* Cor padrão para emojis */
+}
+
+/* Representa a grama (caminho disponível) */
+.path {
+    background-color: #228B22;
+    /* Verde mais claro para a grama */
+}
+
+/* Representa as paredes (obstáculos) */
+.wall {
+    background-color: #006400;
+    /* Mesmo verde do campo para misturar */
+}
+
+/* Representa a posição inicial (ponto de partida) */
+.start {
+    background-color: #FFD700;
+    /* Amarelo para destacar o início */
+    color: black;
+    /* Melhor contraste para o emoji */
+    font-size: 16px;
+}
+
+/* Representa o objetivo (gol) */
+.goal {
+    background-color: #FF4500;
+    /* Laranja para destacar o gol */
+    color: #ffff;
+    /* Cor do emoji do gol */
+    font-size: 16px;
+}
+
+/* Representa o agente (bola de futebol) */
+.agent {
+    color: #ffff;
+    /* Cor da bola */
+    animation: blink 1s infinite;
+}
+
+/* Representa células visitadas */
+.visited {
+    background-color: #32CD32;
+    /* Verde lima para células visitadas */
+}
+
+/* Animação para a bola */
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Estilo para ícones de início e gol */
+.start-icon {
+    font-size: 16px;
+}
+
+.goal-icon {
+    font-size: 16px;
+}
+
+.agent-icon {
+    font-size: 16px;
+}
+
+/* Container dos Controles ao lado direito do Labirinto */
+.controls-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2.5rem;
+
+    padding-top: 2rem;
+}
+
+/* Estilo dos Controles */
+.controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Botões de Controle */
+.controls button {
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: #8234E9;
+    color: #ffff;
+    transition: background-color 0.3s;
+    width: 8rem;
+}
+
+/* Hover nos Botões */
+.controls button:hover:not(:disabled) {
+    background-color: #9956F6;
+}
+
+/* Botões Desabilitados */
+.controls button:disabled {
+    background-color: #A9A9A9;
+    cursor: not-allowed;
+}
+
+/* Status da Busca */
+.status {
+    font-size: 16px;
+    color: #ffff;
+}
+
+/* Status de Sucesso */
+.status.success {
+    color: #32CD32;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Contador de Passos */
+.step-counter {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Legenda abaixo do Labirinto */
+.legend {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-top: 20px;
+}
+
+/* Itens da Legenda */
+.legend div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Células na Legenda */
+.legend .cell {
+    width: 15px;
+    height: 15px;
+    border: 1px solid #ffffff;
+    font-size: 12px;
+    /* Tamanho menor para a legenda */
+}
+
+/* Centralizar os Emojis nas Células */
+.start,
+.goal,
+.agent,
+.visited {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsividade para Telas Médias */
+@media (max-width: 768px) {
+    .main-container {
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    .maze-container {
+        max-width: 100%;
+        width: 90vw;
+    }
+
+    .controls-container {
+        gap: 3rem;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .controls {
+        flex-direction: row;
+    }
+
+    .controls button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .step-counter {
+        font-size: 18px;
+    }
+
+    .status {
+        font-size: 14px;
+    }
+
+    .status.success {
+        font-size: 18px;
+    }
+
+    .legend {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+    }
+}
+
+/* Responsividade para Telas Pequenas (Celulares) */
+@media (max-width: 480px) {
+    .maze-container-wrapper {
+        width: 100%;
+    }
+
+    .main-container {
+        padding: 5px;
+    }
+
+    .controls-container {
+        gap: 2rem;
+        padding-top: 1rem;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .controls {
+        flex-direction: row;
+        gap: 8px;
+    }
+
+    .controls button {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .step-counter {
+        font-size: 16px;
+    }
+
+    .status {
+        font-size: 12px;
+    }
+
+    .status.success {
+        font-size: 16px;
+    }
+
+    .legend {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 4px;
+    }
+
+    .legend .cell {
+        width: 12px;
+        height: 12px;
+        font-size: 10px;
+    }
+
+    .cell {
+        width: 22px;
+        height: 22px;
+        font-size: 14px;
+    }
+
+    .start-icon,
+    .goal-icon,
+    .agent-icon {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,51 @@
+.footer {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background-color: #ffff;
+    color: #212529;
+    padding: 8px;
+
+    font-size: 0.875rem;
+}
+
+.footer a {
+    color: #8234E9;
+    /* Azul do seletor para consistência */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #6156f6;
+    /* Azul mais claro ao passar o mouse */
+}
+
+/* Responsividade para Telas Médias */
+@media (max-width: 768px) {
+    .footer {
+        font-size: 0.8rem;
+        padding: 6px;
+    }
+
+    .footer a {
+        font-size: 0.8rem;
+    }
+}
+
+/* Responsividade para Telas Pequenas */
+@media (max-width: 480px) {
+    .footer {
+        font-size: 0.7rem;
+        padding: 4px;
+    }
+
+    .footer a {
+        font-size: 0.7rem;
+    }
+}
