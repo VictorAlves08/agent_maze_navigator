@@ -79,7 +79,7 @@ const Maze = () => {
                                     >
                                         {isStartCell && <span className="start-icon">🚩</span>}
                                         {isGoalCell && <span className="goal-icon">🥅</span>}
-                                        {isAgentCell && !isGoalCell && <span className="agent-icon">⚽</span>}
+                                        {isAgentCell && <span className="agent-icon">⚽</span>}
                                     </div>
                                 )
                             })}

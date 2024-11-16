@@ -54,19 +54,19 @@
 
 /* Representa a grama (caminho disponível) */
 .path {
-    background-color: #228B22;
+    background-color: #008000;
     /* Verde mais claro para a grama */
 }
 
 /* Representa as paredes (obstáculos) */
 .wall {
-    background-color: #006400;
+    background-color: #003d0c;
     /* Mesmo verde do campo para misturar */
 }
 
 /* Representa a posição inicial (ponto de partida) */
 .start {
-    background-color: #FFD700;
+    background-color: #ffff00;
     /* Amarelo para destacar o início */
     color: black;
     /* Melhor contraste para o emoji */
@@ -91,7 +91,7 @@
 
 /* Representa células visitadas */
 .visited {
-    background-color: #32CD32;
+    background-color: #b5f827;
     /* Verde lima para células visitadas */
 }
 
@@ -153,6 +153,7 @@
     color: #ffff;
     transition: background-color 0.3s;
     width: 8rem;
+    font-family: "Roboto", serif;
 }
 
 /* Hover nos Botões */
