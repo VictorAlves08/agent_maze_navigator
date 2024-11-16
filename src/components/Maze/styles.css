@@ -171,6 +171,12 @@
 .status {
     font-size: 16px;
     color: #ffff;
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
 
 /* Status de Sucesso */
@@ -178,6 +184,7 @@
     color: #32CD32;
     font-size: 20px;
     font-weight: bold;
+    transition: color 0.3s;
     text-align: center;
 }
 
