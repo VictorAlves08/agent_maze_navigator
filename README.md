@@ -2,21 +2,6 @@
 <h1>Maze Solver Visualization - https://agent-maze-navigator.vercel.app</h1>
 </div>
 
-## 📌 Índice
-
-- [✨ Descrição](#✨-descrição)
-- [🚀 Funcionalidades](#🚀-funcionalidades)
-- [🛠️ Tecnologias Utilizadas](#🛠️-tecnologias-utilizadas)
-- [🎮 Uso](#🎮-uso)
-- [🛠️ Instalação](#🛠️-Instalação)
-- [🔍 Algoritmos Implementados](#🔍-algoritmos-implementados)
-  - [DFS - Busca em Profundidade](#dfs---busca-em-profundidade)
-  - [BFS - Busca em Largura](#bfs---busca-em-largura)
-  - [BS - Busca em Feixe](#bs---busca-em-feixe)
-- [📊 Resultados](#📊-resultados)
-- [📫 Contato](#📫-contato)
-- [🤝 Contribuição](#🤝-contribuição)
-
 ## ✨ Descrição
 
 O **Maze Solver Visualization** é uma aplicação web interativa desenvolvida em **React** que permite aos usuários visualizar e comparar diferentes algoritmos de busca utilizados para resolver labirintos. A aplicação suporta **Busca em Profundidade (DFS)**, **Busca em Largura (BFS)** e **Busca em Feixe (BS)**, proporcionando uma compreensão prática de como cada algoritmo explora o espaço de busca.
