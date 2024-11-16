@@ -19,5 +19,5 @@ export const goalPosition = { x: 0, y: 10 };
 export const searchAlgorithmsOptions = [
   { id: 1, value: "DFS", label: "DFS - Busca em Profundidade" },
   { id: 2, value: "BFS", label: "BFS - Busca em Largura" },
-  { id: 3, value: "TODO", label: "TODO" },
+  { id: 3, value: "BS", label: "BS - Busca em Feixe" },
 ];

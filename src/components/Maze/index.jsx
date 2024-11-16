@@ -4,6 +4,7 @@ import { mazeData, startPosition, goalPosition } from '../../utils/mazeData';
 
 import { DFS } from '../../algorithms/DFS';
 import { BFS } from '../../algorithms/BFS';
+import { BS } from '../../algorithms/BS';
 
 import { useAlgorithm } from '../../contexts/AlgorithmContext';
 
@@ -37,6 +38,11 @@ const Maze = () => {
 
         if (selectedAlgorithm === "BFS") {
             found = await BFS(mazeData, startPosition, goalPosition, handleStep);
+        }
+
+        if (selectedAlgorithm === "BS") {
+            const beamWidth = 3;
+            found = await BS(mazeData, startPosition, goalPosition, handleStep, beamWidth);
         }
 
         if (found) {
@@ -87,12 +93,12 @@ const Maze = () => {
                     ))}
                 </div>
                 <div className="legend">
-                    <div><span className="cell path" /> Grama</div>
-                    <div><span className="cell wall" /> Obstáculo</div>
-                    <div><span className="cell start" /> Ponto de Partida 🚩</div>
-                    <div><span className="cell goal" /> Gol 🥅</div>
-                    <div><span className="cell agent" /> Bola ⚽</div>
-                    <div><span className="cell visited" /> Visitado</div>
+                    <div><span className="cell path" />Grama</div>
+                    <div><span className="cell wall" />Obstáculo</div>
+                    <div><span className="cell start" />Ponto de Partida 🚩</div>
+                    <div><span className="cell goal" />Gol 🥅</div>
+                    <div><span className="cell agent" />Bola ⚽</div>
+                    <div><span className="cell visited" />Visitado</div>
                 </div>
             </div>
             <div className="controls-container">
