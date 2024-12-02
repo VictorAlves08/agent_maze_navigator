@@ -130,8 +130,4 @@ Este projeto foi desenvolvido como parte da disciplina de Inteligência Artifici
 - **Universidade Federal de Viçosa**
 - **GitHub:** [@victoralves08](https://github.com/VictorAlves08)
 - **LinkedIn:** [Victor Oliveira](https://www.linkedin.com/in/victor-alves-de-oliveira/)
-
-## 🤝 Contribuição
-
-Contribuições são bem-vindas! Se você deseja melhorar este projeto, sinta-se à vontade para abrir uma _issue_ ou enviar um _pull request_.
 ---
